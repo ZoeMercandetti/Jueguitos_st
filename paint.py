@@ -9,6 +9,8 @@ Exercises
 5. Add width parameter.
 
 LJ
+Cambio de color (rosa y morado)
+
 """
 
 from turtle import *
@@ -77,8 +79,8 @@ onscreenclick(tap)
 listen()
 onkey(undo, 'u')
 onkey(lambda: color('black'), 'K')
-onkey(lambda: color('white'), 'W')
-onkey(lambda: color('green'), 'G')
+onkey(lambda: color('pink'), 'C')
+onkey(lambda: color('purple'), 'P')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
 onkey(lambda: store('shape', line), 'l')
