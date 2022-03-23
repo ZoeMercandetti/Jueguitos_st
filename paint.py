@@ -10,6 +10,7 @@ Exercises
 
 LJ
 Cambio de color (rosa y morado)
+agregar un circulo 
 
 """
 
@@ -18,12 +19,18 @@ from turtle import *
 from freegames import vector
 
 
+
+
+
 def line(start, end):
     """Draw line from start to end."""
     up()
     goto(start.x, start.y)
     down()
     goto(end.x, end.y)
+
+def circle(start,end):
+    pass #TODO
 
 
 def square(start, end):
@@ -38,11 +45,6 @@ def square(start, end):
         left(90)
 
     end_fill()
-
-
-def circle(start, end):
-    """Draw circle from start to end."""
-    pass  # TODO
 
 
 def rectangle(start, end):
@@ -71,6 +73,7 @@ def tap(x, y):
 def store(key, value):
     """Store value in state at key."""
     state[key] = value
+
 
 
 state = {'start': None, 'shape': line}
