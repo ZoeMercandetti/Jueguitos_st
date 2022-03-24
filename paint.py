@@ -11,6 +11,7 @@ Exercises
 LJ
 Cambio de color (rosa y morado)
 agregar un circulo 
+....
 
 """
 
