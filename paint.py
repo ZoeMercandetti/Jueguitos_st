@@ -29,9 +29,15 @@ def line(start, end):
     down()
     goto(end.x, end.y)
 
-def circle(start,end):
-    pass #TODO
 
+def circlep (start, end):
+    up()
+    begin_fill()
+    goto(start.x,start.y)
+    down()
+    x= float(start.x)-float(start.y)
+    circle(x)
+    end_fill()
 
 def square(start, end):
     """Draw square from start to end."""
