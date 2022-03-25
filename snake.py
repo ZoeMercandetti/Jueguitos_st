@@ -4,13 +4,17 @@
 
 from random import randrange
 from turtle import *
-
 from freegames import square, vector
+import random
 
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
-
+"""Hacemos que la comida se mueva"""
+def move_food():
+    food.x=randrange(-20,20)*10
+    food.y=randrange(-20,20)*10
+    ontimer(move_food,5500)
 
 def change(x, y):
     """Change snake direction."""
@@ -65,4 +69,5 @@ onkey(lambda: change(-10, 0), 'Left')
 onkey(lambda: change(0, 10), 'Up')
 onkey(lambda: change(0, -10), 'Down')
 move()
+move_food()
 done()
