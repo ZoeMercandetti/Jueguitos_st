@@ -74,7 +74,8 @@ def move():
         if not inside(target):
             return
 
-    ontimer(move, 50)
+    ontimer(move, 20)
+    """Se cambió la velocidad"""
 
 
 setup(420, 420, 370, 0)
