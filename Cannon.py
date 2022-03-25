@@ -72,7 +72,10 @@ def move():
 
     for target in targets:
         if not inside(target):
-            return
+            
+            target.x = 200
+            """ se modifico y ya no acaba el juego cuando llega a la orilla y empieza otra vez desde el el eje x"""
+
 
     ontimer(move, 20)
     """Se cambió la velocidad"""
