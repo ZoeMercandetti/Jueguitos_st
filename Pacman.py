@@ -1,15 +1,11 @@
 """Pacman, classic arcade game.
 
-Exercises
+#Se hicieron los fantasmas mas inteligentes 
 
-1. Change the board.
-2. Change the number of ghosts.
-3. Change where pacman starts.
-4. Make the ghosts faster/slower.
-5. Make the ghosts smarter.
 """
 
 from random import choice
+from ssl import Options
 from turtle import *
 
 from freegames import floor, vector
@@ -134,12 +130,18 @@ def move():
         if valid(point + course):
             point.move(course)
         else:
-            options = [
-                vector(5, 0),
-                vector(-5, 0),
-                vector(0, 5),
-                vector(0, -5),
-            ]
+            if (pacman.x>point.x):
+                if (pacman.y>point.y):
+                    options=[vector(5,0),vector(0,5)]
+                else:
+                    options=[vector(5,0),vector(0,-5)]
+            else:
+                if (pacman.y>point.y):
+                    options=[vector(-5,0),vector(0,5)]
+                else:
+                    options=[vector(-5,0),vector(0,-5)]
+                
+
             plan = choice(options)
             course.x = plan.x
             course.y = plan.y
