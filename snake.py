@@ -1,11 +1,5 @@
 """Snake, classic arcade game.
-
-Exercises
-
-1. How do you make the snake faster or slower?
-2. How can you make the snake go around the edges?
-3. How would you move the food?
-4. Change the snake to respond to mouse clicks.
+#Se cambió de color a rosa y azulito 
 """
 
 from random import randrange
@@ -51,9 +45,11 @@ def move():
     clear()
 
     for body in snake:
-        square(body.x, body.y, 9, 'blue')
+        square(body.x, body.y, 9, 'blue') 
+        """Cambio de color a azul"""
 
     square(food.x, food.y, 9, 'pink')
+    """Cambio de color a rosa"""
     update()
     ontimer(move, 100)
     
