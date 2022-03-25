@@ -10,9 +10,14 @@ Exercises
 
 LJ
 Cambio de color (rosa y morado)
+<<<<<<< HEAD
 agregar un circulo 
 
 se hizo el circulo 
+=======
+agregar un circulo gato
+....
+>>>>>>> 0939f9888ebf46329ecdf6a9b7732f6e574bb848
 
 """
 
