@@ -1,5 +1,6 @@
 """Snake, classic arcade game.
-#Se cambió de color a rosa y azulito 
+#Se cambió de color a rosa y azulito
+# La comida se mueve 
 """
 
 from random import randrange
