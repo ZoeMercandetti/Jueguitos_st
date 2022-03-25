@@ -86,19 +86,19 @@ def draw():
     if mark is not None and hide[mark]:
         x, y = xy(mark)
         up()
-        goto(x + 2, y)
+        goto(x + 10, y+ 6 )
         color('black')
         write(tiles[mark], font=('Arial', 30, 'normal'))
     up()
     goto(0,300)
     color('black')
-    write(contaps,font=('Arial',25,'normal'))
+    write(contaps,font=('Arial',30,'normal'))
     update()
     ontimer(draw, 100)
 
 
 shuffle(tiles)
-setup(420, 420, 370, 0)
+setup(700, 700, 370, 0)
 addshape(car)
 hideturtle()
 tracer(False)
