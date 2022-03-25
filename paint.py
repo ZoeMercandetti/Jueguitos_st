@@ -37,13 +37,13 @@ def line(start, end):
     goto(end.x, end.y)
 
 
-def circlep (start, end):
+def circulo (start, end):
     up()
-    begin_fill()
     goto(start.x,start.y)
     down()
-    x= float(start.x)-float(start.y)
-    circle(x)
+    begin_fill()
+    r=45
+    circle(r)
     end_fill()
 
 def square(start, end):
