@@ -1,16 +1,24 @@
 """Snake, classic arcade game.
 #Se cambió de color a rosa y azulito
-# La comida se mueve 
+# La comida se mueve
+# implementamos nuevos colores 
 """
 
 from random import randrange
 from turtle import *
 from freegames import square, vector
 import random
+"""nuevos colores"""
+colors=['pink','purple','blue','aquamarine','yellow']
+body_colors=random.choice(colors)
+food_colors=random.choice(colors)
+if food_colors==body_colors:
+    food_colors=random.choice(colors)
 
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
+
 """Hacemos que la comida se mueva"""
 def move_food():
     food.x=randrange(-20,20)*10
@@ -50,16 +58,14 @@ def move():
     clear()
 
     for body in snake:
-        square(body.x, body.y, 9, 'blue') 
+        square(body.x, body.y, 9,body_colors) 
         """Cambio de color a azul"""
 
-    square(food.x, food.y, 9, 'pink')
+    square(food.x, food.y, 9,food_colors)
     """Cambio de color a rosa"""
     update()
     ontimer(move, 100)
     
-
-
 
 setup(420, 420, 370, 0)
 hideturtle()
