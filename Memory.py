@@ -13,11 +13,13 @@ from random import *
 from turtle import *
 
 from freegames import path
-
+""""""
 car = path('car.gif')
-tiles = list(range(32)) * 2
+tiles = ['1','2','3','4','5','6','7','8','9','10','11','12']*4
 state = {'mark': None}
 hide = [True] * 64
+contaps=0
+num_aciertos=0
 
 
 def square(x, y):
@@ -50,11 +52,22 @@ def tap(x, y):
 
     if mark is None or mark == spot or tiles[mark] != tiles[spot]:
         state['mark'] = spot
+        global contaps
+        contaps+=1
+        print (contaps)
     else:
         hide[spot] = False
         hide[mark] = False
         state['mark'] = None
-
+        global num_aciertos
+        num_aciertos+=1
+        print (contaps)
+        if num_aciertos == 32:
+            print ('ganaste esta ronda')
+        up ()
+        goto (0,600)
+        color('pink')
+        write(num_aciertos,font=('Arial',30,' normal'))
 
 def draw():
     """Draw image and tiles."""
@@ -76,7 +89,10 @@ def draw():
         goto(x + 2, y)
         color('black')
         write(tiles[mark], font=('Arial', 30, 'normal'))
-
+    up()
+    goto(0,300)
+    color('black')
+    write(contaps,font=('Arial',25,'normal'))
     update()
     ontimer(draw, 100)
 
